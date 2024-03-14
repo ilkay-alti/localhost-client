@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Archivo } from "next/font/google";
+import { Archivo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Brand from "@/components/Brand";
 
 const archivo = Archivo({ subsets: ["latin"] });
 
@@ -20,7 +20,7 @@ function RootLayout({ children }: RootLayoutProps) {
       <body className={`flex flex-col ` + archivo.className}>
         <Header />
         <div>{children}</div>
-        <Footer />
+        <Brand />
       </body>
     </html>
   );

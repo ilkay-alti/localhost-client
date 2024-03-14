@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "auth-hero": "url('/auth-hero.svg')",
+        "search-hero": "url('/search-hero.svg')",
       },
     },
   },

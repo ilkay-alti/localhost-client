@@ -7,6 +7,7 @@ interface IListItemProps {
     location: string;
     star: number;
     price: number;
+    priceChart?: boolean;
   };
 }
 const ListItem: FC<IListItemProps> = ({ data }) => {
@@ -35,15 +36,17 @@ const ListItem: FC<IListItemProps> = ({ data }) => {
             <p className="text-[#171E1D] font-semibold">{data.price}</p>
             <p className="text-[#787878] text-sm"> /night</p>
           </div>
-          <div className="flex items-center gap-2">
-            <Image
-              src={"/priceChart.svg"}
-              alt="price chart"
-              width={18}
-              height={18}
-            />
-            <div className="text-[#00C29F]">Price chart</div>
-          </div>
+          {data.priceChart && (
+            <div className="flex items-center gap-2">
+              <Image
+                src={"/priceChart.svg"}
+                alt="price chart"
+                width={18}
+                height={18}
+              />
+              <div className="text-[#00C29F]">Price chart</div>
+            </div>
+          )}
         </div>
       </div>
     </div>

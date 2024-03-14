@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const Footer = () => {
+const Brand = () => {
   return (
     <div className="container mx-20 h-10 flex justify-between items-center bg-[#F4F4F4]">
       <Link href={"/"}>© 2024 Localhost, Inc. All Rights Reserved</Link>
@@ -14,4 +14,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Brand;
