@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { FC } from "react";
-
+import { LuHeart, LuHeartOff } from "react-icons/lu";
 interface IListItemProps {
   data: {
     title: string;
@@ -8,18 +8,27 @@ interface IListItemProps {
     star: number;
     price: number;
     priceChart?: boolean;
+    liked?: boolean;
   };
 }
 const ListItem: FC<IListItemProps> = ({ data }) => {
+  const user = true;
   return (
     <div className="flex flex-col max-w-[300px] rounded-xl border-2 border-[#E8ECF2]">
-      <Image
-        src="/listing image.svg"
-        alt="Picture of the author"
-        width={300}
-        height={300}
-        className="rounded-t-xl"
-      />
+      <div className="relative">
+        {user && (
+          <div className="absolute right-5 top-2 bg-white rounded-full w-8 h-8 flex items-center justify-center ">
+            {data.liked ? <LuHeart /> : <LuHeartOff />}
+          </div>
+        )}
+        <Image
+          src="/listing image.svg"
+          alt="Picture of the author"
+          width={300}
+          height={300}
+          className="rounded-t-xl"
+        />
+      </div>
       <div className="flex flex-col p-4 gap-5">
         <div className="flex  items-center justify-between">
           <div>

@@ -19,7 +19,7 @@ function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body className={`flex flex-col ` + archivo.className}>
         <Header />
-        <div>{children}</div>
+        <div className="flex flex-col flex-1">{children}</div>
         <Brand />
       </body>
     </html>

@@ -15,7 +15,7 @@ const Search = () => {
     // Add your logic here
   };
   return (
-    <div className="flex flex-col h-[264px] justify-center bg-search-hero py-6 text-black px-20">
+    <div className="flex flex-col h-[264px] justify-center bg-search-hero bg-cover py-6 text-black px-20">
       <p className="font-bold text-4xl">
         Find a <text className="text-[#00C29F]">host</text> for every journey
       </p>
@@ -24,7 +24,7 @@ const Search = () => {
         needs
       </p>
       <div className=" flex gap-3 mt-6 px-[12px] py-[10px] bg-white rounded-xl ">
-        <div className="relative max-w-[547px] w-full h-16 flex items-center border border-[#D9D9D9] rounded">
+        <div className="relative w-full h-16 flex items-center border border-[#D9D9D9] rounded">
           <input
             type="text"
             placeholder="Search for a city"
@@ -58,13 +58,13 @@ const Search = () => {
             className=" w-full h-full rounded-lg border-none relative px-4 outline-none "
             onChange={(e) => setGuests(e.target.value)}
           />
-          <label className="absolute right-8 ">
+          <label className="absolute right-10 ">
             <FaRegUser />
           </label>
         </div>
         <button
           onClick={onClick}
-          className="bg-[#00C29F] text-white rounded-lg w-36 h-16"
+          className="bg-[#00C29F] text-white rounded-lg min-w-36 h-16 "
         >
           Search
         </button>

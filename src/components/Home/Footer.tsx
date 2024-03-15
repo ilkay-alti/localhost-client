@@ -79,7 +79,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="flex px-20 mt-5 mb-10  bg-[#F4F4F4]">
+    <div className="flex px-20 mt-5 mb-10  ">
       {mockData.map((data, i) => {
         return (
           <FooterElement title={data.title} elements={data.elements} key={i} />
