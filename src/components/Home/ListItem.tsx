@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { FC } from "react";
 import { LuHeart, LuHeartOff } from "react-icons/lu";
 interface IListItemProps {
   data: {
+    id: number;
     title: string;
     location: string;
     star: number;
@@ -14,7 +16,10 @@ interface IListItemProps {
 const ListItem: FC<IListItemProps> = ({ data }) => {
   const user = true;
   return (
-    <div className="flex flex-col max-w-[300px] rounded-xl border-2 border-[#E8ECF2]">
+    <Link
+      href={`/detail/` + data.id}
+      className="flex flex-col max-w-[300px] rounded-xl border-2 border-[#E8ECF2]"
+    >
       <div className="relative">
         {user && (
           <div className="absolute right-5 top-2 bg-white rounded-full w-8 h-8 flex items-center justify-center ">
@@ -58,7 +63,7 @@ const ListItem: FC<IListItemProps> = ({ data }) => {
           )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,3 +1,5 @@
+import Brand from "@/components/Brand";
+import Footer from "@/components/Home/Footer";
 import React, { FC } from "react";
 
 interface DetailLayoutProps {
@@ -5,7 +7,12 @@ interface DetailLayoutProps {
 }
 
 const DetailLayout: FC<DetailLayoutProps> = ({ children }) => {
-  return <div className="container mx-auto">{children}</div>;
+  return (
+    <>
+      <div className="container mx-auto">{children}</div>
+      <Footer />
+    </>
+  );
 };
 
 export default DetailLayout;
